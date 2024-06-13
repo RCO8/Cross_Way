@@ -212,7 +212,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mmale_walk1_right
+      name: Male_walk1_right
       rect:
         serializedVersion: 2
         x: 29
@@ -418,11 +418,11 @@ TextureImporter:
       Male_walk1_back: 1821392220
       Male_walk1_front: 1816746477
       Male_walk1_left: -484722690
+      Male_walk1_right: 536816396
       Male_walk2_back: 449189045
       Male_walk2_front: -1321141025
       Male_walk2_left: -646203332
       Male_walk2_right: 1628722040
-      Mmale_walk1_right: 536816396
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
