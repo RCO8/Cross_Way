@@ -43,20 +43,18 @@ public class RoadStage : MonoBehaviour
     {
         int treeCount = Random.Range(2, 5);
 
-        Vector3 createTreePosition = new Vector2(Random.Range(-12f, 12f), -1f);
-
-        Instantiate(treePrefab, HumanLine.position + createTreePosition, Quaternion.identity);
+        for (int i = 0; i < treeCount; i++)
+        {
+            Vector3 createTreePosition = new Vector2(Random.Range(-12f, 12f), -1f);
+            Instantiate(treePrefab, HumanLine.position + createTreePosition, Quaternion.identity, HumanLine);
+        }
     }
 
     IEnumerator InitCar(Transform roadLine, Vector3 direction)
     {
         while (GameManager.Instance.isPlaying)
         {
-            Debug.Log("ÄÚ·çÆ¾");
-            if(direction.x < 0)
-                carPrefab.GetComponent<Car>().SetDirection(true);
-            else
-                carPrefab.GetComponent<Car>().SetDirection(false);
+            carPrefab.GetComponent<Car>().SetDirection(direction.x < 0);
             Instantiate(carPrefab, roadLine.position + direction, Quaternion.identity);
 
             waitingTime = Random.Range(1.5f, 2.5f);
