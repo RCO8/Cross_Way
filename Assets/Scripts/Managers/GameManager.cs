@@ -8,19 +8,17 @@ public class GameManager : MonoBehaviour
 
     public bool isPlaying { get; set; }
 
+
+    public GameObject Player;
+
     private void Awake()
     {
         if(Instance == null)
             Instance = this;
     }
 
-    void Start()
+    private void Start()
     {
         isPlaying = true;
-    }
-
-    void Update()
-    {
-        
     }
 }
