@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public bool isPlaying { get; set; }
+    public bool isPlaying { get; set; } = true;
 
 
     public GameObject Player;
