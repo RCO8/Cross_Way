@@ -1,36 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class RoadStage : MonoBehaviour
 {
     private GameObject carPrefab;
+    private GameObject treePrefab;
+
     private float waitingTime;
 
     [SerializeField]
-    private GameObject WayLine1, WayLine2;
+    private Transform WayLine1, WayLine2;
+    [SerializeField]
+    private Transform HumanLine;
 
     private List<Vector2> WayLineCar = new List<Vector2>();   //생성될 차의 위치
 
     void Start()
     {
         carPrefab = Resources.Load<GameObject>("Prefabs/Car");
+        treePrefab = Resources.Load<GameObject>("Prefabs/Tree");
 
         waitingTime = Random.Range(1.5f, 2.5f);
 
+        //인도 설정
+        InitTree();
+
+        //차선 설정
         WayLineCar.Add(new Vector2(-10, 1.25f));
         WayLineCar.Add(new Vector2(-10, -0.4f));
         WayLineCar.Add(new Vector2(10, 1.25f));
         WayLineCar.Add(new Vector2(10, -0.4f));
 
-        StartCoroutine(InitOneCar(WayLine1.transform, WayLineCar[0]));
-        StartCoroutine(InitOneCar(WayLine1.transform, WayLineCar[1]));
-        StartCoroutine(InitOneCar(WayLine2.transform, WayLineCar[2]));
-        StartCoroutine(InitOneCar(WayLine2.transform, WayLineCar[3]));
+        StartCoroutine(InitCar(WayLine1, WayLineCar[0]));
+        StartCoroutine(InitCar(WayLine1, WayLineCar[1]));
+        StartCoroutine(InitCar(WayLine2, WayLineCar[2]));
+        StartCoroutine(InitCar(WayLine2, WayLineCar[3]));
     }
 
+    private void InitTree()
+    {
+        int treeCount = Random.Range(2, 5);
 
-    IEnumerator InitOneCar(Transform roadLine, Vector3 direction)
+        Vector3 createTreePosition = new Vector2(Random.Range(-12f, 12f), -1f);
+
+        Instantiate(treePrefab, HumanLine.position + createTreePosition, Quaternion.identity);
+    }
+
+    IEnumerator InitCar(Transform roadLine, Vector3 direction)
     {
         while (GameManager.Instance.isPlaying)
         {

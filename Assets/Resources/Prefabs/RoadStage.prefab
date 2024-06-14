@@ -248,8 +248,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b09481923ebb5541861b851071ea205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WayLine1: {fileID: 9142025254244108379}
-  WayLine2: {fileID: 2326997553635230082}
+  WayLine1: {fileID: 8246656893526890784}
+  WayLine2: {fileID: 8457726682637396040}
+  HumanLine: {fileID: 3179691306299126511}
 --- !u!1 &7409769284438999730
 GameObject:
   m_ObjectHideFlags: 0
