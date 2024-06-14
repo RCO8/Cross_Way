@@ -18,4 +18,15 @@ public class Coin : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.layer == 3) //Car¿Í ºÎ‹HÈù´Ù¸é
+        {
+            if(collision.transform.position.x > transform.position.x)
+                transform.Translate(-1f, 0, 0);
+            else
+                transform.Translate(1f, 0, 0);
+        }
+    }
 }
