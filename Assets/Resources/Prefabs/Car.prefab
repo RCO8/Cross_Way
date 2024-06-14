@@ -61,7 +61,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!61 &4154350257675772898
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -119,6 +119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a7f2177139f7bf43bc076dfae3abfba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CarSpeed: 5
+  spriteRenderer: {fileID: 561308642700745064}
 --- !u!1 &7607158562923511435
 GameObject:
   m_ObjectHideFlags: 0
