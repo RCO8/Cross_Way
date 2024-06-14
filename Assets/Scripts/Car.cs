@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class Car : MonoBehaviour
 {
-    public float CarSpeed = 10f;
+    private float carSpeed = 10f;
+    [SerializeField]
+    Sprite[] CarSprite;
 
     [SerializeField]
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rgdBody2D;
 
     private Vector2 moveDirection = Vector2.zero;
-
-    public void SetSpriteIndex(Sprite spr)
-    {
-        spriteRenderer.sprite = spr;
-    }
 
     public void SetDirection(bool dir)
     {
@@ -29,6 +26,10 @@ public class Car : MonoBehaviour
 
     private void Start()
     {
+        spriteRenderer.sprite = CarSprite[Random.Range(0, 2)];
+
+        carSpeed = Random.Range(10f, 20f);
+
         if(spriteRenderer.flipX)    //우로 전진
             moveDirection = Vector2.right;
         else    //좌로 전진
@@ -37,7 +38,7 @@ public class Car : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rgdBody2D.velocity = moveDirection * CarSpeed;
+        rgdBody2D.velocity = moveDirection * carSpeed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

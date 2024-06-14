@@ -5,8 +5,6 @@ using UnityEngine;
 public class RoadStage : MonoBehaviour
 {
     private GameObject carPrefab;
-    [SerializeField]
-    private Sprite Car1, Car2;
 
     [SerializeField]
     private GameObject WayLine1, WayLine2;
@@ -15,9 +13,15 @@ public class RoadStage : MonoBehaviour
     {
         carPrefab = Resources.Load<GameObject>("Prefabs/Car");
 
-        Vector3 carStartPos1 = new Vector2(-10, 0);
+        //WayLine1
+        carPrefab.GetComponent<Car>().SetDirection(true);
+        Instantiate(carPrefab, WayLine1.transform.position + new Vector3(-10, 1.25f), Quaternion.identity);
+        Instantiate(carPrefab, WayLine1.transform.position + new Vector3(-10, -0.4f), Quaternion.identity);
 
-        Instantiate(carPrefab, WayLine1.transform.position + carStartPos1, Quaternion.identity);
+        //WayLin2
+        carPrefab.GetComponent<Car>().SetDirection(false);
+        Instantiate(carPrefab, WayLine2.transform.position + new Vector3(10, 1.25f), Quaternion.identity);
+        Instantiate(carPrefab, WayLine2.transform.position + new Vector3(10, -0.4f), Quaternion.identity);
     }
 
     void Update()

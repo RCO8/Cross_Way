@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5419859697274936118}
   - component: {fileID: 4154350257675772898}
   - component: {fileID: 520705309703491458}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Car
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a7f2177139f7bf43bc076dfae3abfba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CarSpeed: 5
+  CarSprite:
+  - {fileID: 1323996645, guid: a2951898186bdd14094245227341a6a1, type: 3}
+  - {fileID: -1010739467, guid: a2951898186bdd14094245227341a6a1, type: 3}
   spriteRenderer: {fileID: 561308642700745064}
 --- !u!1 &7607158562923511435
 GameObject:
@@ -131,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6702529140946541504}
   - component: {fileID: 561308642700745064}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +198,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 1323996645, guid: a2951898186bdd14094245227341a6a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 4, y: 2}
