@@ -5,6 +5,7 @@ using UnityEngine;
 public class RoadStage : MonoBehaviour
 {
     private GameObject carPrefab;
+    private float waitingTime;
 
     [SerializeField]
     private GameObject WayLine1, WayLine2;
@@ -13,6 +14,12 @@ public class RoadStage : MonoBehaviour
     {
         carPrefab = Resources.Load<GameObject>("Prefabs/Car");
 
+        waitingTime = Random.Range(1.5f, 2.5f);
+        InvokeRepeating("InitCar", 0, waitingTime);
+    }
+
+    private void InitCar()
+    {
         //WayLin2
         carPrefab.GetComponent<Car>().SetDirection(false);
         Instantiate(carPrefab, WayLine2.transform.position + new Vector3(10, 1.25f), Quaternion.identity);
@@ -23,10 +30,14 @@ public class RoadStage : MonoBehaviour
         Instantiate(carPrefab, WayLine1.transform.position + new Vector3(-10, 1.25f), Quaternion.identity);
         Instantiate(carPrefab, WayLine1.transform.position + new Vector3(-10, -0.4f), Quaternion.identity);
 
+        waitingTime = Random.Range(1.5f, 2.5f);
     }
 
-    void Update()
+    private void DestroyRoad()
     {
-        
+        if(Vector2.Distance(transform.position, GameManager.Instance.Player.transform.position) > 16)
+        {
+            Destroy(gameObject);
+        }
     }
 }
