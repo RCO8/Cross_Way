@@ -12,6 +12,16 @@ public class Car : MonoBehaviour
 
     private Vector2 moveDirection = Vector2.zero;
 
+    public void SetSpriteIndex(Sprite spr)
+    {
+        spriteRenderer.sprite = spr;
+    }
+
+    public void SetDirection(bool dir)
+    {
+        spriteRenderer.flipX = dir;
+    }
+
     private void Awake()
     {
         rgdBody2D = GetComponent<Rigidbody2D>();

@@ -13,7 +13,11 @@ public class RoadStage : MonoBehaviour
 
     void Start()
     {
-        carPrefab = Resources.Load<GameObject>("Car");
+        carPrefab = Resources.Load<GameObject>("Prefabs/Car");
+
+        Vector3 carStartPos1 = new Vector2(-10, 0);
+
+        Instantiate(carPrefab, WayLine1.transform.position + carStartPos1, Quaternion.identity);
     }
 
     void Update()
