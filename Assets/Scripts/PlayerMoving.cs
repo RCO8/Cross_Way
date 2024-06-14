@@ -25,7 +25,8 @@ public class PlayerMoving : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Moving();
+        if(GameManager.Instance.isPlaying)
+            Moving();
     }
 
     private void Moving()
