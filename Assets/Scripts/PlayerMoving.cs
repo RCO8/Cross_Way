@@ -11,16 +11,12 @@ public class PlayerMoving : MonoBehaviour
     private Rigidbody2D rgdBody;
 
     private Vector2 playerMovement = Vector2.zero;
+    private bool isMove = false;
 
     private void Awake()
     {
         rgdBody = GetComponent<Rigidbody2D>();
         playerAnimation = GetComponent<PlayerAnimation>();
-    }
-
-    private void Start()
-    {
-
     }
 
     private void FixedUpdate()
@@ -34,14 +30,20 @@ public class PlayerMoving : MonoBehaviour
         rgdBody.velocity = playerMovement.normalized * PlayerSpeed;
 
         //애니메이션 적용
-        playerAnimation.SetAnim(playerMovement.normalized);
+        playerAnimation.SetAnim(isMove, playerMovement.normalized);
     }
 
     public void GetMove(InputAction.CallbackContext context)
     {
-        if(context.phase == InputActionPhase.Performed)
+        if (context.phase == InputActionPhase.Performed)
+        {
             playerMovement = context.ReadValue<Vector2>();
-        else if(context.phase == InputActionPhase.Canceled)
+            isMove = true;
+        }
+        else if (context.phase == InputActionPhase.Canceled)
+        {
             playerMovement = Vector2.zero;
+            isMove = false;
+        }
     }
 }
