@@ -5,13 +5,17 @@ using UnityEngine.InputSystem;
 
 public class PlayerMoving : MonoBehaviour
 {
-    Rigidbody2D rgdBody;
+    public float PlayerSpeed = 3f;
 
-    Vector2 playerMovement = Vector2.zero;
+    private PlayerAnimation playerAnimation;
+    private Rigidbody2D rgdBody;
+
+    private Vector2 playerMovement = Vector2.zero;
 
     private void Awake()
     {
         rgdBody = GetComponent<Rigidbody2D>();
+        playerAnimation = GetComponent<PlayerAnimation>();
     }
 
     private void Start()
@@ -26,7 +30,10 @@ public class PlayerMoving : MonoBehaviour
 
     private void Moving()
     {
-        rgdBody.velocity = playerMovement.normalized;
+        rgdBody.velocity = playerMovement.normalized * PlayerSpeed;
+
+        //애니메이션 적용
+        playerAnimation.SetAnim(playerMovement.normalized);
     }
 
     public void GetMove(InputAction.CallbackContext context)
