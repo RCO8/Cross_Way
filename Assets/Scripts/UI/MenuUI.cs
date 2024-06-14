@@ -5,8 +5,10 @@ using UnityEngine.InputSystem;
 
 public class MenuUI : MonoBehaviour
 {
-    public void OnMenuEnter(InputAction.CallbackContext context)
+    PlayerInput input;
+
+    private void Start()
     {
-        Debug.Log("¸Þ´º");
+
     }
 }

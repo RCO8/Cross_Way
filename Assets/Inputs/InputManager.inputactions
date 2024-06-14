@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Menu",
+                    "type": "Button",
+                    "id": "2ba4a161-c6f1-4763-8332-d7244e717a31",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -123,26 +132,46 @@
                     "action": "Action",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "890e3918-a39f-4f80-a027-2ede0a42cc43",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyBoard",
+                    "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
         {
             "name": "Option",
-            "id": "b2525361-f2f3-4289-ba27-2e0ac6cffb93",
+            "id": "5c891836-6f02-425a-b4d5-3930c5d832da",
             "actions": [
                 {
                     "name": "Confirm",
                     "type": "Button",
-                    "id": "8e94d298-5059-45a6-8d5c-10c41dbf72ec",
+                    "id": "8398ea91-56a0-40f7-9337-3091402ab570",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Cancel",
+                    "name": "CursorUp",
+                    "type": "Value",
+                    "id": "fb2e633d-2d00-444d-aaf5-2a5c7d68a6bb",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Enter",
                     "type": "Button",
-                    "id": "4b958252-aef6-46e4-bd4f-611c37548aa5",
+                    "id": "8b9654ce-7c7e-454b-a0d3-9193de212610",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -152,45 +181,23 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "1b220cdf-3f7f-437b-b367-7bd4acde97ad",
+                    "id": "33f72ef4-ee34-411e-b65d-bdb5b41cb1a7",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyBoard",
+                    "action": "Confirm",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b656d08f-e994-4494-8646-5cdfd5c4d233",
                     "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyBoard",
-                    "action": "Confirm",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6fb19056-4272-4cff-8aff-f9d1647b6a49",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Console",
-                    "action": "Confirm",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "53b5d8ad-12d4-48ae-a663-fcdb87419a20",
-                    "path": "<Keyboard>/backspace",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyBoard",
-                    "action": "Cancel",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "71dc5ba8-8688-4d5c-8436-5203c2e838b4",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Console",
-                    "action": "Cancel",
+                    "action": "Enter",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

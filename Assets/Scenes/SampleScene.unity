@@ -845,6 +845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1467690315}
+  MenuUI: {fileID: 1816200695}
 --- !u!4 &1133942773
 Transform:
   m_ObjectHideFlags: 0
@@ -1054,6 +1055,7 @@ GameObject:
   - component: {fileID: 1467690319}
   - component: {fileID: 1467690321}
   - component: {fileID: 1467690323}
+  - component: {fileID: 1467690324}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1119,14 +1121,6 @@ MonoBehaviour:
     m_ActionId: 322ff591-4bc7-4332-8a16-0016812250d5
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 8e94d298-5059-45a6-8d5c-10c41dbf72ec
-    m_ActionName: Option/Confirm[/Keyboard/enter]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 4b958252-aef6-46e4-bd4f-611c37548aa5
-    m_ActionName: Option/Cancel[/Keyboard/backspace]
-  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1467690321}
         m_TargetAssemblyTypeName: PlayerAction, Assembly-CSharp
@@ -1142,8 +1136,32 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 3cca1c5c-78f7-4920-b4dc-f6362f1bc394
     m_ActionName: Player/Action[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8398ea91-56a0-40f7-9337-3091402ab570
+    m_ActionName: Option/Confirm
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fb2e633d-2d00-444d-aaf5-2a5c7d68a6bb
+    m_ActionName: Option/CursorUp[/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1467690324}
+        m_TargetAssemblyTypeName: PlayerInputSystem, Assembly-CSharp
+        m_MethodName: OnEnterMenu
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8b9654ce-7c7e-454b-a0d3-9193de212610
+    m_ActionName: Option/Enter
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Console
+  m_DefaultControlScheme: KeyBoard
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -1257,6 +1275,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1180305766}
+--- !u!114 &1467690324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467690315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85d133e43b7ccad4787bf645a3bf4dda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1543655714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1578,6 +1608,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1816200696}
+  - component: {fileID: 1816200697}
   m_Layer: 5
   m_Name: MenuUI
   m_TagString: Untagged
@@ -1606,6 +1637,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1816200697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816200695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc5944ede326b645861b1ef5f2ce6ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2040754954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3179691306299126511, guid: 59486925e062b33498b0cd70c0f015a9, type: 3}

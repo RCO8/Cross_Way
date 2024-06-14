@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject Player;
 
+    public GameObject MenuUI;
+
     private void Awake()
     {
         if(Instance == null)
@@ -20,5 +22,15 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         isPlaying = true;
+
+        MenuUI.SetActive(false);
+    }
+
+    public void OpenMenu(bool act)
+    {
+        MenuUI.SetActive(act);
+
+        //메뉴가 열려있다면
+        Time.timeScale = act ? 0f : 1f;
     }
 }
