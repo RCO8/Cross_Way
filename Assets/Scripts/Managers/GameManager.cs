@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public GameObject Player;
+    public GameObject MenuUI;
     public ObjectPool Pooling;
 
     public bool isPlaying { get; set; } = true;
@@ -22,5 +23,14 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         isPlaying = true;
+
+        if(MenuUI.active)
+            MenuUI.SetActive(false);
+    }
+
+    public void OpenMenu(bool menu)
+    {
+        MenuUI.SetActive(menu);
+        Time.timeScale = menu ? 0f : 1f;
     }
 }
