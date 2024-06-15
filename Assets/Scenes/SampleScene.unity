@@ -2149,7 +2149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2052676460636a429f6817c84745d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textCoinMesh: {fileID: 0}
+  textCoinMesh: {fileID: 1611114710}
 --- !u!4 &2040754954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3179691306299126511, guid: 59486925e062b33498b0cd70c0f015a9, type: 3}

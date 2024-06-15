@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerAction : MonoBehaviour
 {
     public int CoinScore { get; private set; } = 0;
+    public float DistanceScore { get; private set; } = 0f;
 
     public void GetCoin(int coin)
     {
@@ -19,5 +20,10 @@ public class PlayerAction : MonoBehaviour
         {
             Debug.Log("Action");
         }
+    }
+
+    private void LateUpdate()
+    {
+        DistanceScore = transform.position.y;
     }
 }

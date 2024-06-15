@@ -8,11 +8,17 @@ public class DistanceUI : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI textDistanceMesh;
 
-    void LateUpdate()
-    {
-        float playerDiastance = GameManager.Instance.Player.transform.position.y;
+    private float playerDistance;
 
-        if(playerDiastance > 0f)
-            textDistanceMesh.text = $"{playerDiastance.ToString("N2")} m";
+    private void Start()
+    {
+        playerDistance = GameManager.Instance.Player.action.DistanceScore;
+    }
+
+    void Update()
+    {
+        playerDistance = GameManager.Instance.Player.action.DistanceScore;
+        if (playerDistance > 0f)
+            textDistanceMesh.text = $"{playerDistance.ToString("N2")} m";
     }
 }
