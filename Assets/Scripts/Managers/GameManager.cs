@@ -5,32 +5,22 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public GameObject Player;
+    public ObjectPool Pooling;
 
     public bool isPlaying { get; set; } = true;
 
-
-    public GameObject Player;
-
-    public GameObject MenuUI;
 
     private void Awake()
     {
         if(Instance == null)
             Instance = this;
+
+        Pooling = GetComponent<ObjectPool>();
     }
 
     private void Start()
     {
         isPlaying = true;
-
-        MenuUI.SetActive(false);
-    }
-
-    public void OpenMenu(bool act)
-    {
-        MenuUI.SetActive(act);
-
-        //메뉴가 열려있다면
-        Time.timeScale = act ? 0f : 1f;
     }
 }

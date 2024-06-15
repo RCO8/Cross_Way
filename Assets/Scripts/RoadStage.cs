@@ -5,7 +5,6 @@ using UnityEngine.UIElements;
 
 public class RoadStage : MonoBehaviour
 {
-    private GameObject carPrefab;
     private GameObject treePrefab;
     private GameObject[] coinPrefab = new GameObject[3];
 
@@ -20,7 +19,6 @@ public class RoadStage : MonoBehaviour
 
     void Start()
     {
-        carPrefab = Resources.Load<GameObject>("Prefabs/Car");
         treePrefab = Resources.Load<GameObject>("Prefabs/Tree");
 
         waitingTime = Random.Range(1.5f, 2.5f);
@@ -57,7 +55,9 @@ public class RoadStage : MonoBehaviour
         for (int i = 0; i < createCoinCount; i++)
         {
             Vector3 createCoinPosition = new Vector2(Random.Range(-12f, 12f), 0f);
-            Instantiate(coinPrefab[Random.Range(0, coinPrefab.Length)], HumanLine.position + createCoinPosition, Quaternion.identity);
+            //이 코드를 오브젝트 풀링으로 변경
+            GameObject coin = Instantiate(coinPrefab[Random.Range(0, coinPrefab.Length)], HumanLine.position + createCoinPosition, Quaternion.identity);
+            coin.transform.SetParent(transform);
         }
     }
 
@@ -76,8 +76,11 @@ public class RoadStage : MonoBehaviour
     {
         while (GameManager.Instance.isPlaying)
         {
-            carPrefab.GetComponent<Car>().SetDirection(direction.x < 0);
-            Instantiate(carPrefab, roadLine.position + direction, Quaternion.identity);
+            //Instantiate(carPrefab, roadLine.position + direction, Quaternion.identity);
+            GameObject car = GameManager.Instance.Pooling.SpawnFromPool("Car");
+            car.transform.position = roadLine.position + direction;
+
+            car.GetComponent<Car>().SetDirection(direction.x < 0);
 
             waitingTime = Random.Range(1.5f, 2.5f);
             yield return new WaitForSeconds(waitingTime);
