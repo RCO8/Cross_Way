@@ -328,6 +328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1133942773}
   - component: {fileID: 1133942772}
+  - component: {fileID: 1133942774}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -348,6 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1467690315}
+  Pooling: {fileID: 0}
 --- !u!4 &1133942773
 Transform:
   m_ObjectHideFlags: 0
@@ -363,6 +365,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1133942774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133942771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed945ffce9ae2084482815374e9d6649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pools:
+  - tag: Car
+    prefab: {fileID: 6345242351252463797, guid: b34a1ce644fcd9c49a66d842c4f11cff, type: 3}
+    size: 20
 --- !u!1 &1180305763
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,7 +612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f219082f34fdce4381077c77ffee5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerSpeed: 3
+  PlayerSpeed: 7
 --- !u!50 &1467690320
 Rigidbody2D:
   serializedVersion: 4
@@ -736,7 +754,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a73a99a627ea7524caaf855899770a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RoadStage: {fileID: 5874552941394938375, guid: 59486925e062b33498b0cd70c0f015a9, type: 3}
 --- !u!4 &2040754954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3179691306299126511, guid: 59486925e062b33498b0cd70c0f015a9, type: 3}
@@ -817,7 +834,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 1467690316}
+  - {fileID: 1724497497}
   - {fileID: 1133942773}
   - {fileID: 7864789244626322137}
   - {fileID: 850491049}
-  - {fileID: 1724497497}

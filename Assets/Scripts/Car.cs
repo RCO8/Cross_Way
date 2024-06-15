@@ -41,7 +41,10 @@ public class Car : MonoBehaviour
         rgdBody2D.velocity = moveDirection * carSpeed;
 
         if (Mathf.Abs(transform.position.x) > 13f)
-            Destroy(gameObject);
+        {
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
