@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 511936858}
   - component: {fileID: 511936857}
   m_Layer: 5
-  m_Name: CoinText
+  m_Name: DistanceText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1084,6 +1084,7 @@ GameObject:
   - component: {fileID: 1208675199}
   - component: {fileID: 1208675201}
   - component: {fileID: 1208675200}
+  - component: {fileID: 1208675202}
   m_Layer: 5
   m_Name: DistancePanel
   m_TagString: Untagged
@@ -1149,6 +1150,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208675198}
   m_CullTransparentMesh: 1
+--- !u!114 &1208675202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208675198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c8b7e644eb34348b9eb0417b1ec102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textDistanceMesh: {fileID: 511936857}
 --- !u!1 &1224427067
 GameObject:
   m_ObjectHideFlags: 0
@@ -2135,6 +2149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2052676460636a429f6817c84745d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textCoinMesh: {fileID: 0}
 --- !u!4 &2040754954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3179691306299126511, guid: 59486925e062b33498b0cd70c0f015a9, type: 3}
