@@ -57,7 +57,8 @@ public class RoadStage : MonoBehaviour
         for (int i = 0; i < createCoinCount; i++)
         {
             Vector3 createCoinPosition = new Vector2(Random.Range(-12f, 12f), 0f);
-            Instantiate(coinPrefab[Random.Range(0, coinPrefab.Length)], HumanLine.position + createCoinPosition, Quaternion.identity);
+            GameObject coin = Instantiate(coinPrefab[Random.Range(0, coinPrefab.Length)], HumanLine.position + createCoinPosition, Quaternion.identity);
+            coin.transform.SetParent(transform);
         }
     }
 
