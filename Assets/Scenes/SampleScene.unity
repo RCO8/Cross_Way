@@ -933,8 +933,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37918cc488346874f9b170829e036728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1467690315}
   MenuUI: {fileID: 1582509153}
+  Player: {fileID: 1467690325}
   Pooling: {fileID: 0}
 --- !u!4 &1133942773
 Transform:
@@ -1432,6 +1432,7 @@ GameObject:
   - component: {fileID: 1467690317}
   - component: {fileID: 1467690320}
   - component: {fileID: 1467690322}
+  - component: {fileID: 1467690325}
   - component: {fileID: 1467690319}
   - component: {fileID: 1467690321}
   - component: {fileID: 1467690323}
@@ -1681,6 +1682,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85d133e43b7ccad4787bf645a3bf4dda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1467690325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467690315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dfab25afbe67c940910c699cc921338, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1553947962
@@ -2044,6 +2057,7 @@ GameObject:
   - component: {fileID: 1885760842}
   - component: {fileID: 1885760844}
   - component: {fileID: 1885760843}
+  - component: {fileID: 1885760845}
   m_Layer: 5
   m_Name: CoinPanel
   m_TagString: Untagged
@@ -2109,6 +2123,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885760841}
   m_CullTransparentMesh: 1
+--- !u!114 &1885760845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885760841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2052676460636a429f6817c84745d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2040754954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3179691306299126511, guid: 59486925e062b33498b0cd70c0f015a9, type: 3}

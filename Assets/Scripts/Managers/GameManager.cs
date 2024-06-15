@@ -5,8 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public GameObject Player;
     public GameObject MenuUI;
+    public Player Player;
     public ObjectPool Pooling;
 
     public bool isPlaying { get; set; } = true;
