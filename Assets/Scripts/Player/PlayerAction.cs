@@ -10,7 +10,7 @@ public class PlayerAction : MonoBehaviour
     public void GetCoin(int coin)
     {
         CoinScore += coin;
-        Debug.Log($"Coin : {CoinScore}");
+        //Debug.Log($"Coin : {CoinScore}");
     }
 
     public void GetAction(InputAction.CallbackContext context)

@@ -6,10 +6,10 @@ using UnityEngine;
 public class CoinUI : MonoBehaviour
 {
     [SerializeField] 
-    private TextMeshProUGUI textMesh;
+    private TextMeshProUGUI textCoinMesh;
 
     private void LateUpdate()
     {
-        textMesh.text = $"Coin : {GameManager.Instance.Player.action.CoinScore.ToString()}";
+        textCoinMesh.text = $"Coin : {GameManager.Instance.Player.action.CoinScore.ToString()}";
     }
 }
