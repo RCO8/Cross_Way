@@ -46,5 +46,6 @@ public class MenuUI : MonoBehaviour
     public void ExitButtonAction()
     {
         //게임 종료
+        Application.Quit();
     }
 }
