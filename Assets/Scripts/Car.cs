@@ -17,6 +17,11 @@ public class Car : MonoBehaviour
     public void SetDirection(bool dir)
     {
         spriteRenderer.flipX = dir;
+
+        if (spriteRenderer.flipX)    //우로 전진
+            moveDirection = Vector2.right;
+        else    //좌로 전진
+            moveDirection = Vector2.left;
     }
 
     private void Awake()
@@ -30,10 +35,6 @@ public class Car : MonoBehaviour
 
         carSpeed = Random.Range(10f, 20f);
 
-        if(spriteRenderer.flipX)    //우로 전진
-            moveDirection = Vector2.right;
-        else    //좌로 전진
-            moveDirection = Vector2.left;
     }
 
     private void FixedUpdate()

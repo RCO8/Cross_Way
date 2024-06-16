@@ -79,9 +79,7 @@ public class RoadStage : MonoBehaviour
             //Instantiate(carPrefab, roadLine.position + direction, Quaternion.identity);
             GameObject car = GameManager.Instance.Pooling.SpawnFromPool("Car");
             car.transform.position = roadLine.position + direction;
-
-            car.GetComponent<Car>().SetDirection(direction.x < 0);
-
+            car.GetComponent<Car>().SetDirection(car.transform.position.x < 0);
             waitingTime = Random.Range(1.5f, 2.5f);
             yield return new WaitForSeconds(waitingTime);
         }
