@@ -48,4 +48,21 @@ public class MenuUI : MonoBehaviour
         //게임 종료
         Application.Quit();
     }
+
+    //메뉴창 입력
+    public void OnConfirm(InputAction.CallbackContext context)
+    {
+        if(context.phase == InputActionPhase.Started)
+        {
+            Debug.Log("Confirm");
+        }    
+    }
+
+    public void OnCancel(InputAction.CallbackContext context)
+    {
+        if(context.phase == InputActionPhase.Started)
+        {
+            Debug.Log("Cancel");
+        }
+    }
 }

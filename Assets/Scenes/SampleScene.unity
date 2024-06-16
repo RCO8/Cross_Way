@@ -1647,13 +1647,21 @@ MonoBehaviour:
     m_ActionId: 2ba4a161-c6f1-4763-8332-d7244e717a31
     m_ActionName: Player/Menu[/Keyboard/enter]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1582509155}
+        m_TargetAssemblyTypeName: MenuUI, Assembly-CSharp
+        m_MethodName: OnConfirm
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 8398ea91-56a0-40f7-9337-3091402ab570
     m_ActionName: Option/Confirm
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: fb2e633d-2d00-444d-aaf5-2a5c7d68a6bb
-    m_ActionName: Option/CursorUp
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1467690324}
@@ -1670,6 +1678,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 8b9654ce-7c7e-454b-a0d3-9193de212610
     m_ActionName: Option/Enter[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1582509155}
+        m_TargetAssemblyTypeName: MenuUI, Assembly-CSharp
+        m_MethodName: OnCancel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ba3e984b-1b29-470f-8c7d-f11de2dc1330
+    m_ActionName: Option/Cancel[/Keyboard/backspace]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Console
   m_DefaultActionMap: Player

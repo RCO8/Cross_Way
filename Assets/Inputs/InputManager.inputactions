@@ -136,7 +136,7 @@
                 {
                     "name": "",
                     "id": "890e3918-a39f-4f80-a027-2ede0a42cc43",
-                    "path": "<Keyboard>/enter",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyBoard",
@@ -151,6 +151,15 @@
             "id": "5c891836-6f02-425a-b4d5-3930c5d832da",
             "actions": [
                 {
+                    "name": "Enter",
+                    "type": "Button",
+                    "id": "8b9654ce-7c7e-454b-a0d3-9193de212610",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Confirm",
                     "type": "Button",
                     "id": "8398ea91-56a0-40f7-9337-3091402ab570",
@@ -160,18 +169,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "CursorUp",
-                    "type": "Value",
-                    "id": "fb2e633d-2d00-444d-aaf5-2a5c7d68a6bb",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "Enter",
+                    "name": "Cancel",
                     "type": "Button",
-                    "id": "8b9654ce-7c7e-454b-a0d3-9193de212610",
+                    "id": "ba3e984b-1b29-470f-8c7d-f11de2dc1330",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -182,7 +182,7 @@
                 {
                     "name": "",
                     "id": "33f72ef4-ee34-411e-b65d-bdb5b41cb1a7",
-                    "path": "",
+                    "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyBoard",
@@ -192,8 +192,19 @@
                 },
                 {
                     "name": "",
+                    "id": "676261a6-f2ac-4ff2-8f19-83340f09c2dd",
+                    "path": "<Keyboard>/backspace",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyBoard",
+                    "action": "Cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "b656d08f-e994-4494-8646-5cdfd5c4d233",
-                    "path": "<Keyboard>/enter",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyBoard",
