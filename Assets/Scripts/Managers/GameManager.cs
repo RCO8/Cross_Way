@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public GameObject MenuUI;
+    public MenuUI MenuUI;
     public Player Player;
     public ObjectPool Pooling;
 
@@ -24,13 +24,20 @@ public class GameManager : MonoBehaviour
     {
         isPlaying = true;
 
-        if(MenuUI.active)
-            MenuUI.SetActive(false);
+        if(MenuUI.gameObject.active)
+            MenuUI.gameObject.SetActive(false);
     }
 
     public void OpenMenu(bool menu)
     {
-        MenuUI.SetActive(menu);
+        MenuUI.gameObject.SetActive(menu);
         Time.timeScale = menu ? 0f : 1f;
+    }
+
+    public void GameOver()
+    {
+        isPlaying = false;
+        MenuUI.gameObject.SetActive(true);
+        MenuUI.GameOverPanel();
     }
 }

@@ -53,7 +53,7 @@ public class Car : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("게임 오버");
-            GameManager.Instance.isPlaying = false;
+            GameManager.Instance.GameOver();
         }
     }
 }
