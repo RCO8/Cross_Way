@@ -143,6 +143,17 @@
                     "action": "Menu",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6d37252d-ebf8-4d78-ab34-ddd1ab5b6c47",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Console",
+                    "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -192,11 +203,33 @@
                 },
                 {
                     "name": "",
+                    "id": "d060b19c-6724-4f44-acf7-5507f2ce75ff",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Console",
+                    "action": "Confirm",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "b656d08f-e994-4494-8646-5cdfd5c4d233",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyBoard",
+                    "action": "Enter",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f476919f-b113-4af2-b65f-8e2ee6736c19",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Console",
                     "action": "Enter",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -230,6 +263,72 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyBoard",
+                    "action": "CursorMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "ceaff46d-6316-4354-ae99-13d3cc7a1b59",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CursorMove",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "aa2407c6-5e29-48d7-92ba-9e00a0f860f5",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Console",
+                    "action": "CursorMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "20d4cf04-ff0e-4ef0-bc9c-a6945e4b9ef8",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Console",
+                    "action": "CursorMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "a248b093-516f-40d6-bf59-95688418f031",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CursorMove",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "379d031e-3fd6-4ce3-b7df-4f309a32b813",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Console",
+                    "action": "CursorMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "32e6bc3d-ee2f-47ef-af20-58d969a91691",
+                    "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Console",
                     "action": "CursorMove",
                     "isComposite": false,
                     "isPartOfComposite": true
