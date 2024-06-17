@@ -17,14 +17,14 @@ public class PlayerInputSystem : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Started)
         {
-            if (playerInput.defaultActionMap == "Option")
+            if (playerInput.currentActionMap.name == "Option")
             {
-                playerInput.defaultActionMap = "Player";
+                playerInput.SwitchCurrentActionMap("Player");
                 GameManager.Instance.OpenMenu(false);
             }
             else
             {
-                playerInput.defaultActionMap = "Option";
+                playerInput.SwitchCurrentActionMap("Option");
                 GameManager.Instance.OpenMenu(true);
             }
         }
