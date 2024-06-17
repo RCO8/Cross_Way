@@ -13,6 +13,11 @@ public class MenuUI : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI ResumeButtonPanel;
 
+    [SerializeField]
+    private RectTransform[] labelMenus;
+
+    private int selectPointer = 0;
+
     private string GameOverText = "GAME OVER";
 
     public void GameOverPanel()
@@ -31,14 +36,10 @@ public class MenuUI : MonoBehaviour
 
     public void ResumeButtonAction()    //버튼이 눌려졌을때
     {
-        if (CaptionText.text.Equals(GameOverText))
-        {
-            //다시 시작
+        if (CaptionText.text.Equals(GameOverText))  //다시 시작
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-        else
+        else   //계속
         {
-            //계속
             GameManager.Instance.OpenMenu(false);
         }
     }
@@ -54,8 +55,21 @@ public class MenuUI : MonoBehaviour
     {
         if(context.phase == InputActionPhase.Started)
         {
-            Debug.Log("Confirm");
+            switch(selectPointer)
+            {
+                case 0: //Resume or Restart
+                    ResumeButtonAction();
+                    break;
+                case 1: //exit
+                    ExitButtonAction();
+                    break;
+            }
         }    
+    }
+
+    public void OnCursorMove(InputAction.CallbackContext context)
+    {
+
     }
 
     public void OnCancel(InputAction.CallbackContext context)

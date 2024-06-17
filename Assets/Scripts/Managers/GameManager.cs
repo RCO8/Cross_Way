@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     {
         MenuUI.gameObject.SetActive(menu);
         Time.timeScale = menu ? 0f : 1f;
+        Player.input.playerInput.SwitchCurrentActionMap(menu ? "Option" : "Player");
     }
 
     public void GameOver()
