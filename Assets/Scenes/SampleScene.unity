@@ -1224,9 +1224,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1582509154}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 724, y: -537}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -200, y: 50.2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1451359754
@@ -1416,7 +1416,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1582509155}
         m_TargetAssemblyTypeName: MenuUI, Assembly-CSharp
-        m_MethodName: OnCancel
+        m_MethodName: OnCursorMove
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1426,8 +1426,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: ba3e984b-1b29-470f-8c7d-f11de2dc1330
-    m_ActionName: Option/Cancel[/Keyboard/backspace]
+    m_ActionId: b03be4e4-743d-4e94-8dfc-2c019670a48c
+    m_ActionName: Option/CursorMove[/Keyboard/s,/Keyboard/w]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: KeyBoard
   m_DefaultActionMap: Player
@@ -1759,6 +1759,7 @@ MonoBehaviour:
   labelMenus:
   - {fileID: 1255463148}
   - {fileID: 1013881366}
+  Cursor: {fileID: 1451359753}
 --- !u!1 &1611114708
 GameObject:
   m_ObjectHideFlags: 0

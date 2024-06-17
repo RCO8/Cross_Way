@@ -169,13 +169,13 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Cancel",
-                    "type": "Button",
-                    "id": "ba3e984b-1b29-470f-8c7d-f11de2dc1330",
-                    "expectedControlType": "Button",
+                    "name": "CursorMove",
+                    "type": "Value",
+                    "id": "b03be4e4-743d-4e94-8dfc-2c019670a48c",
+                    "expectedControlType": "Integer",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -192,17 +192,6 @@
                 },
                 {
                     "name": "",
-                    "id": "676261a6-f2ac-4ff2-8f19-83340f09c2dd",
-                    "path": "<Keyboard>/backspace",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyBoard",
-                    "action": "Cancel",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "b656d08f-e994-4494-8646-5cdfd5c4d233",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
@@ -211,6 +200,39 @@
                     "action": "Enter",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "b62ed806-2a83-4d3b-a789-6edf48a3e678",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CursorMove",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "e8eaa6b6-486d-4f7a-86cf-174a51766be0",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyBoard",
+                    "action": "CursorMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "dd6a3706-7d59-4bcf-b760-e1d034dba495",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyBoard",
+                    "action": "CursorMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

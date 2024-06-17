@@ -15,10 +15,18 @@ public class MenuUI : MonoBehaviour
 
     [SerializeField]
     private RectTransform[] labelMenus;
+    [SerializeField]
+    private RectTransform Cursor;
 
     private int selectPointer = 0;
 
     private string GameOverText = "GAME OVER";
+
+    private void Start()
+    {
+        Cursor.position = labelMenus[0].position;
+        Cursor.Translate(-100, -150, 0);
+    }
 
     public void GameOverPanel()
     {
@@ -69,7 +77,19 @@ public class MenuUI : MonoBehaviour
 
     public void OnCursorMove(InputAction.CallbackContext context)
     {
+        if (context.phase == InputActionPhase.Started)
+        {
+            int cursor = (int)context.ReadValue<float>();
+            selectPointer += cursor;
+        }
 
+        if(selectPointer > labelMenus.Length)
+            selectPointer = 0;
+        else if(selectPointer < 0)
+            selectPointer = labelMenus.Length - 1;
+
+        Cursor.position = labelMenus[selectPointer].position;
+        Cursor.Translate(0, -150, 0);
     }
 
     public void OnCancel(InputAction.CallbackContext context)
