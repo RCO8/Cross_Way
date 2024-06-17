@@ -23,8 +23,9 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         isPlaying = true;
+        Time.timeScale = 1f;
 
-        if(MenuUI.gameObject.active)
+        if (MenuUI.gameObject.active)
             MenuUI.gameObject.SetActive(false);
     }
 
@@ -38,7 +39,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         isPlaying = false;
-        MenuUI.gameObject.SetActive(true);
+        OpenMenu(true);
         MenuUI.GameOverPanel();
     }
 }
